@@ -17,9 +17,15 @@ function App() {
   function Divisao(){
     setResultado(parseInt(primeiroValor) / parseInt(segundoValor))
   }
+  function Limpar(){
+    setPrimeiro("");
+    setSegundo("");
+    setResultado("");
+  }
+
 
   return (
-    <div>
+    <div style={{textAlign: "Center", backgroundColor: "lightblue", fontFamily: 'Consolas'}}>
       <h2>Calculadora!</h2>
   
       <form>
@@ -56,6 +62,7 @@ function App() {
       <button onClick={Subtracao}>Subtração</button>
       <button onClick={Multiplicacao}>Multiplicação</button>
       <button onClick={Divisao}>Divisão</button>
+      <button onClick={Limpar}>Limpar</button>
      
     </div>
   );
