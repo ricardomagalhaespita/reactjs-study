@@ -1,23 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App(){
   const [input, setInput] = useState('');
   const [tarefa, setTarefas] = useState([
     'Estudar Flutter',
-     'Estudar React JS'
+    'Estudar React JS'
    ]);
 
+
+   useEffect(() => {
+    alert('useEffect')
+  }, []);
+
+  useEffect(() => {
+    alert('useEffect - tarefas')
+  }, [tarefa]);
 
   function handleRegister(e){
     e.preventDefault();
     setTarefas([...tarefa, input]);
-    localStorage.setItem('@tarefas', input);
+    localStorage.setItem('@tarefas', tarefa);
     setInput('');
 
     const test = localStorage.getItem('@tarefas')
-    
     alert("Foi adicionado a lista: "+ test)
-
   }
 
   return(

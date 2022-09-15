@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 //import './index.css';
-import App from './aulas/aula-04';
-// import App from './aulas/aula-03';
+// import App from './aulas/calculadora.js';
+import App from './aulas/aula-06';
 
 //import reportWebVitals from './reportWebVitals';
 
