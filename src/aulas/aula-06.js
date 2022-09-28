@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 function App(){
 
-const [distritos, setDitrito] = useState([]);
+const [distritos, setDistrito] = useState([]);
 
 useEffect (()=>{
     // console.log("useEffect");
@@ -13,7 +13,7 @@ useEffect (()=>{
     .then((response) => response.json())
     .then((json) => {
         console.log(json);
-        setDitrito(json);
+        setDistrito(json);
     })
 
 },[]);
